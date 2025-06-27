@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <title>Dark Tasks - O Pacto das Almas</title>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Dark Tasks</h1>
+            <p class="subtitle">Apenas os mais fortes sobrevivem à jornada</p>
+        </header>
+
+        <div class="stats-panel">
+            <div class="stat-item">
+                <span id="total-tarefas">0</span>
+                <span>Almas Desafiadas</span>
+            </div>
+            <div class="stat-item">
+                <span id="tarefas-pendentes">0</span>
+                <span>Almas Errantes</span>
+            </div>
+            <div class="stat-item">
+                <span id="tarefas-concluidas">0</span>
+                <span>Almas Coletadas</span>
+            </div>
+        </div>
+
+        <div class="controls-panel">
+            <input type="text" id="descricaoTarefa" placeholder="Descreva sua nova missão...">
+            <select id="prioridadeTarefa">
+                <option value="baixa">Ameaça Comum</option>
+                <option value="media">Ameaça Formidável</option>
+                <option value="alta">Ameaça de Lorde</option>
+            </select>
+            <button id="adicionarBtn">Aceitar Missão</button>
+        </div>
+
+        <div class="filter-panel">
+            <input type="text" id="filtro-tarefas" placeholder="Buscar pergaminhos por palavra-chave...">
+        </div>
+
+        <table id="tabelaTarefas">
+            <thead>
+                <tr>
+                    <th>Registro</th>
+                    <th>Missão</th>
+                    <th>Ameaça</th>
+                    <th>Início da Jornada</th>
+                    <th>Alma Coletada em</th>
+                    <th>Destino</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+    </div>
+
+    <div id="edit-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2>Alterar o Destino da Missão</h2>
+            <input type="hidden" id="edit-tarefa-id">
+            <div class="form-group">
+                <label for="edit-descricao">Novo Pergaminho:</label>
+                <input type="text" id="edit-descricao">
+            </div>
+            <div class="form-group">
+                <label for="edit-prioridade">Nível de Ameaça:</label>
+                <select id="edit-prioridade">
+                    <option value="baixa">Ameaça Comum</option>
+                    <option value="media">Ameaça Formidável</option>
+                    <option value="alta">Ameaça de Lorde</option>
+                </select>
+            </div>
+            <div class="modal-actions">
+                <button id="salvar-edit-btn">Forjar Destino</button>
+                <button id="cancelar-edit-btn">Recuar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

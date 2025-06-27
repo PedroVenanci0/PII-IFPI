@@ -1,0 +1,139 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button.concluirBtn {
+    background-color: #28a745;
+}
+button.concluirBtn:hover {
+    background-color: #218838;
+}
+
+button.excluirBtn {
+    background-color: #FF4136;
+}
+button.excluirBtn:hover {
+    background-color: #dc3545;
+}
+
+.action-button {
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* ESTILOS ADICIONAIS PARA MELHORIAS */
+.tarefa-concluida td:nth-child(2) {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button.reabrirBtn {
+    background-color: #ffc107;
+    color: black;
+}
+button.reabrirBtn:hover {
+    background-color: #e0a800;
+}
+
+button.editarBtn {
+    background-color: #17a2b8;
+}
+button.editarBtn:hover {
+    background-color: #138496;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.prioridade-baixa { border-left: 5px solid #28a745; }
+.prioridade-media { border-left: 5px solid #ffc107; }
+.prioridade-alta { border-left: 5px solid #dc3545; }
+
+.add-controls {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+.add-controls .form-group {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+.add-controls label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.add-controls select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}

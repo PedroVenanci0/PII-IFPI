@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora Simples</h1>
+
+    <input type="number" id="valor1" placeholder="Valor 1">
+    <input type="number" id="valor2" placeholder="Valor 2">
+
+    <div>
+    <label><input type="radio" name="operacao" value="soma"> Soma</label>
+    <label><input type="radio" name="operacao" value="subtracao"> Subtração</label>
+    <label><input type="radio" name="operacao" value="multiplicacao"> Multiplicação</label>
+    <label><input type="radio" name="operacao" value="divisao"> Divisão</label>
+    </div>
+
+    <button id="calcular">Calcular</button>
+
+    <p>Resultado: <span id="resultado"></span></p>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

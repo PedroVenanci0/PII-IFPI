@@ -1,0 +1,183 @@
+:root {
+    --bg-color: #1a1a1a;
+    --surface-color: #2a2a2a;
+    --primary-color: #383838;
+    --accent-color: #b48c2c; /* Ouro velho / Bronze */
+    --font-color: #d1d1d1;
+    --font-color-dark: #7a7a7a;
+    --danger-color: #8b0000; /* Vermelho escuro/sangue */
+    --warning-color: #b48c2c;
+    --success-color: #556B2F; /* Verde musgo escuro */
+    --font-family: 'Cinzel', serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    background-image: url('https://www.transparenttextures.com/patterns/cracks.png'); /* Textura sutil */
+    color: var(--font-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: var(--surface-color);
+    padding: 25px;
+    border-radius: 4px; /* Bordas mais retas */
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+header {
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--accent-color);
+}
+
+header h1 {
+    font-weight: 700;
+    font-size: 3em;
+    color: var(--accent-color);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    color: var(--font-color-dark);
+    font-style: italic;
+}
+
+.stats-panel {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid var(--primary-color);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-item span:first-child {
+    font-size: 2em;
+    font-weight: 700;
+    color: var(--accent-color);
+    display: block;
+}
+
+.stat-item span:last-child {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--font-color-dark);
+}
+
+.controls-panel, .filter-panel {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    border: 1px solid var(--font-color-dark);
+    color: var(--font-color);
+    border-radius: 2px;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    border: 1px solid var(--accent-color);
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: var(--accent-color);
+    color: black;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--surface-color);
+    color: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+th {
+    color: var(--accent-color);
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.tarefa-concluida td:nth-child(2) {
+    text-decoration: line-through;
+    color: var(--font-color-dark);
+}
+
+.prioridade-alta { border-left: 4px solid var(--danger-color); }
+.prioridade-media { border-left: 4px solid var(--warning-color); }
+.prioridade-baixa { border-left: 4px solid var(--success-color); }
+
+.action-button {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: var(--font-color);
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 8px;
+    transition: all 0.2s ease;
+}
+.action-button:hover {
+    color: var(--accent-color);
+    transform: scale(1.2);
+}
+.action-button:disabled {
+    color: #4a4a4a;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; justify-content: center; align-items: center; z-index: 1000;
+}
+.modal-content {
+    background-color: var(--surface-color);
+    padding: 30px; border-radius: 4px; width: 90%; max-width: 500px;
+    border: 1px solid var(--accent-color);
+    box-shadow: 0 0 25px rgba(180, 140, 44, 0.3);
+}
+.modal-content h2 { margin-top: 0; color: var(--accent-color); }
+.modal-content .form-group { margin-bottom: 15px; }
+.modal-content label { display: block; margin-bottom: 5px; font-weight: 700;}
+.modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+
+#cancelar-edit-btn { background-color: var(--primary-color); color: var(--font-color); border-color: var(--font-color-dark); }
+#cancelar-edit-btn:hover { background-color: var(--surface-color); color: var(--font-color); }
